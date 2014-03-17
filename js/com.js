@@ -164,7 +164,7 @@ var mss = {
 						break;
 					}
 				}
-				if(nowModule == null&&st>ret[0]) nowModule = ret.length - 1;
+				if(nowModule == null&&st>=ret[0]) nowModule = ret.length - 1;
 				$("nav:eq(0) li").removeClass("curr");
 				if (nowModule!=null) {
 					$("nav:eq(0) li").eq(nowModule).addClass("curr");
