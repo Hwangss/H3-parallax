@@ -69,8 +69,6 @@ var mss = {
 			p4p = $(".m-part4").find('.people'),
 			p4c = $(".m-part4").find('.cont');
 
-		
-
 			$(window).scroll(function() {
 				var t = $(window).scrollTop(),
 					t1i,t2i, t3i, t4i;
@@ -96,7 +94,6 @@ var mss = {
 				}
 				if (t >t3 && t<=2956) {
 					t3i = t>1960?200:t - 1760;
-					console.log(t3-1760)
 					p3p.css({
 						backgroundPosition: -101+Math.floor(t3i * 0.5) + 'px 0'
 					})
@@ -168,9 +165,9 @@ var mss = {
 					}
 				}
 				if(nowModule == null&&st>ret[0]) nowModule = ret.length - 1;
-				$(".m-nav li").removeClass("curr");
+				$("nav:eq(0) li").removeClass("curr");
 				if (nowModule!=null) {
-					$(".m-nav li").eq(nowModule).addClass("curr");
+					$("nav:eq(0) li").eq(nowModule).addClass("curr");
 				}
 			}
 			$(window).scroll(function() {
@@ -261,7 +258,7 @@ var mss = {
 
 		$('.u-next').each(function  (num) {
 			$(this).click(function  () {
-				$('.m-nav li').eq(num+1).trigger('click');
+				$('nav:eq(0) li').eq(num+1).trigger('click');
 			})
 		})
 	},
