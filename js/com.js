@@ -1,9 +1,12 @@
 $(function() {
 	nie.use(["nie.util.video", "ui.tab"], function() {
-		mss.use('parallax', 'p1', 'p2','p3', 'nav');
+		mss.use('p1', 'p2','p3', 'nav');
+		if(!/(ipad|iphone|android)/ig.test(navigator.userAgent)) {
+			mss.use('parallax');
+			$('<link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/cake/gw/14v1/css/pc.css" media="all">').appendTo("head");
+		}
 	})
 })
-
 
 // 判断是否有支持css3的浏览器
 var aBrowser = ['-webkit-', '-moz-', '', '-ms-'],
@@ -128,10 +131,11 @@ var mss = {
 	nav: function() {
 		$('[data-target]').click(function() {
 			var _this = $(this),
-				target = "." + _this.data('target');
-			_this.addClass('curr').siblings().removeClass('curr');
+				target = "." + _this.data('target'),
+				num=_this.parents('nav').attr('class')=='m-nav-mini'?$(target).offset().top-91:$(target).offset().top;
+
 			$('html,body').animate({
-				scrollTop: $(target).offset().top
+				scrollTop: num+1
 			},1000);
 		})
 
@@ -139,7 +143,7 @@ var mss = {
 			oNav = $('nav').eq(0);
 		$(window).resize(function() {
 			var w = $(window).width();
-			if (w < 1700) {
+			if (w < 1650) {
 				oBody.addClass('g-mini');
 				oNav.attr('class', 'm-nav-mini');
 			} else {
@@ -203,17 +207,19 @@ var mss = {
 				oSwitchAni.stop(true, false).removeAttr('style');
 				switch (num) {
 					case 0:
-						oSwitchAni.eq(0).css({
+						oSwitchAni.eq(num).css({
 							visibility: 'visible',
 							opacity: '0',
-							marginTop: '-200px'
+							marginTop: '-200px',
+							marginLeft: '-200px'
 						}).animate({
 							marginTop: 0,
-							opacity: 1
+							opacity: 1,
+							marginLeft:0
 						}, 1000);
 						break;
 					case 1:
-						oSwitchAni.eq(1).css({
+						oSwitchAni.eq(num).css({
 							visibility: 'visible',
 							opacity: '0',
 							marginTop: '-100px',
@@ -225,12 +231,12 @@ var mss = {
 						}, 1000);
 						break;
 					case 2:
-						oSwitchAni.eq(2).css({
+						oSwitchAni.eq(num).css({
 							visibility: 'visible',
 							opacity: '0',
-							height: 0
+							marginTop: '-200px'
 						}).animate({
-							height: 419,
+							marginTop: 0,
 							opacity: 1
 						}, 1000);
 						break;
