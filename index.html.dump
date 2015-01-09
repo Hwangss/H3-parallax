@@ -6,8 +6,8 @@
   <meta name="keywords" content="cake shop, simulation, mobile game, patisserie" />
   <meta name="description" content="Tales Of Cake: Bake a sweet dream with your friends." />
   <meta name="viewport" content="width=1650, user-scalable=no" />
-  <meta name="author" content="Õ¯“◊£¨NetEase Inc." />
-  <meta name="copyright" content="Õ¯“◊£¨NetEase Inc." />
+  <meta name="author" content="ÁΩëÊòìÔºåNetEase Inc." />
+  <meta name="copyright" content="ÁΩëÊòìÔºåNetEase Inc." />
   <meta name="pmid" content="275562" />
   <meta name="editor" content="gzyuzhiheng" />
   <meta name="designer" content="anna" />  
@@ -19,14 +19,14 @@
   <script charset="gb2312" src="http://res.nie.netease.com/comm/html5/createEle.js"></script>
   <![endif]-->
   
-  <!-- jquery mix NIE (◊Ó–¬∞Ê±æ£©-->
+  <!-- jquery mix NIE (ÊúÄÊñ∞ÁâàÊú¨Ôºâ-->
   <script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
   <script charset="gb2312" src="js/com.js"></script>
   <script>
     nie.util.pageLoad=nie.util.pageLoad||function(e){$(function(){var g=$(window),f={},h={},i=window.location.hash,j=function(){var c=g.scrollTop()-50,a=c+g.height()+50,d;for(d in f){var b=f[d],e=!1;if(b.b){if(b.y>=c&&b.y<=a||b.b>=c&&b.b<=a)e=!0}else b.y>=c&&b.y<=a&&(e=!0);e&&b.dom.attr("src",b.src)}for(d in h)b=h[d],(b.top>=c&&b.top<=a||b.bot>=c&&b.bot<=a)&&b.dom.attr("style","background-image:url("+b.src+")")};e.bgSelector&&$(e.bgSelector).each(function(c){var a=$(this),d=a.attr("data-bgUrl");if(d!=
 ""){var b=a.offset().top+parseInt($.browser.msie?a.css("background-position-y"):a.css("background-position").split(" ")[1]);h[c]={dom:a,src:d,top:b,bot:b+a.height()}}});e.imgSelector&&$(e.imgSelector).each(function(c){var a=$(this),d=a.attr("data-src");if(d!="")if(f[c]={dom:a,src:d,y:a.offset().top},a.css("height"))f[c].b=f[c].y+parseInt(a.css("height"));else if(a.attr("height"))f[c].b=f[c].y+parseInt(a.attr("height"))});g.scroll(j).resize(j);(i==""||$("a#"+i+"[name="+i+"]").length==0)&&j()})};
 setTimeout(function(){
-  //”≈ªØº”‘ÿ
+  //‰ºòÂåñÂä†ËΩΩ
   new nie.util.pageLoad({
     imgSelector:"img"
   });
@@ -35,7 +35,7 @@ setTimeout(function(){
 </head>
 <body>
     <article class="g-wrap">
-        <h1 class="hide">back a sweet dream£°</h1>
+        <h1 class="hide">back a sweet dreamÔºÅ</h1>
         <nav class="m-nav">
             <ul class="list">
                 <li class="p1" data-target="m-part1"><a href="javascript:;" role="button"></a></li>
